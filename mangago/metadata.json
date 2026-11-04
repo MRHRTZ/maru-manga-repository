@@ -1,0 +1,10 @@
+{
+  "id": "mangago",
+  "name": "Mangago",
+  "version": 1,
+  "adapter": "planned",
+  "app_url": "https://play.google.com/store/apps/details?id=baca.read.komik.manga&hl=id",
+  "languages": ["en", "id"],
+  "nsfw": true,
+  "planned": true
+}

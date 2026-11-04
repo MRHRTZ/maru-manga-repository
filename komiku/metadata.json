@@ -1,0 +1,11 @@
+{
+  "id": "komiku",
+  "name": "Komiku",
+  "version": 2,
+  "adapter": "komiku",
+  "base_url": "https://komiku.org",
+  "languages": ["id"],
+  "nsfw": false,
+  "attribution": "Keiyoushi extensions-source Komiku source, Apache-2.0; native Lua port",
+  "source": ["source.lua", "parser.lua"]
+}

@@ -1,0 +1,9 @@
+{
+  "id": "mangarock",
+  "name": "MangaRock",
+  "version": 1,
+  "adapter": "planned",
+  "url": "https://mangarock.one/",
+  "languages": ["en"],
+  "planned": true
+}

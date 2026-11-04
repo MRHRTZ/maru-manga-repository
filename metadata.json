@@ -2,18 +2,61 @@
   "schema_version": 1,
   "id": "maru-official",
   "name": "Maru Manga Sources",
-  "version": 1,
+  "author": "MRHRTZ",
+  "version": "1.15.0",
+  "status": "OK",
   "sources": [
     {
-      "id": "mangadex",
-      "name": "MangaDex",
+      "id": "komiku",
+      "name": "Komiku",
+      "version": 2,
+      "adapter": "komiku",
+      "base_url": "https://komiku.org",
+      "languages": ["id"],
+      "metadata": "komiku/metadata.json",
+      "profile": {
+        "api_url": "https://api.komiku.org",
+        "image_hosts": ["thumbnail.komiku.to", "thumbnail.komiku.org", "img.komiku.org", "image.komiku.org", "update.komiku.org", "komikid.org"],
+        "list_selector": "div.bge",
+        "list_link_selector": "a",
+        "list_title_selector": "h3",
+        "list_cover_selector": "img",
+        "title_selector": "h1 span[itemprop=name]",
+        "description_selector": "p.desc[itemprop=description], #Sinopsis > p",
+        "author_selector": "span[itemprop=author] meta[itemprop=name]",
+        "artist_selector": "span[itemprop=artist] meta[itemprop=name]",
+        "status_selector": "meta[itemprop=creativeWorkStatus]",
+        "metadata_row_selector": "table.inftable tr",
+        "genre_selector": "ul.genre li.genre a span",
+        "cover_selector": ".ims img",
+        "cover_attribute": "src",
+        "chapter_selector": "#Daftar_Chapter tr",
+        "chapter_link_selector": "a",
+        "chapter_attribute": "href",
+        "page_selector": "#Baca_Komik img",
+        "page_attributes": ["src"]
+      }
+    },
+    {
+      "id": "mangarock",
+      "name": "MangaRock",
       "version": 1,
-      "adapter": "mangadex",
-      "base_url": "https://api.mangadex.org",
-      "languages": [
-        "multi"
-      ],
-      "metadata": "mangadex/metadata.json"
+      "adapter": "planned",
+      "url": "https://mangarock.one/",
+      "languages": ["en"],
+      "planned": true,
+      "metadata": "mangarock/metadata.json"
+    },
+    {
+      "id": "mangago",
+      "name": "Mangago",
+      "version": 1,
+      "adapter": "planned",
+      "app_url": "https://play.google.com/store/apps/details?id=baca.read.komik.manga&hl=id",
+      "languages": ["en", "id"],
+      "nsfw": true,
+      "planned": true,
+      "metadata": "mangago/metadata.json"
     }
   ]
 }
