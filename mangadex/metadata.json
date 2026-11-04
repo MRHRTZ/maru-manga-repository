@@ -1,0 +1,11 @@
+{
+  "id": "mangadex",
+  "name": "MangaDex",
+  "version": 1,
+  "adapter": "mangadex",
+  "base_url": "https://api.mangadex.org",
+  "languages": [
+    "multi"
+  ],
+  "metadata": "mangadex/metadata.json"
+}

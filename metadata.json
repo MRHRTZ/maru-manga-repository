@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "id": "maru-official",
+  "name": "Maru Manga Sources",
+  "version": 1,
+  "sources": [
+    {
+      "id": "mangadex",
+      "name": "MangaDex",
+      "version": 1,
+      "adapter": "mangadex",
+      "base_url": "https://api.mangadex.org",
+      "languages": [
+        "multi"
+      ],
+      "metadata": "mangadex/metadata.json"
+    }
+  ]
+}
