@@ -1,8 +1,8 @@
-# MaruManga Repository
+# Maru Manga Repositories
 
 `metadata.json` is the validated source catalog consumed by MaruManga Downloader. Root catalog versions and per-source versions use `MAJOR.MINOR.PATCH` semantic versions. Bump the root version when catalog entries or metadata change; bump a source version when that adapter's behavior or configuration changes. Integer source versions remain accepted only for older repositories during migration.
 
-Catalog `1.23.2` includes reviewed bundled adapters for Komiku `3.0.0`, MangaRock `2.0.0`, MangaMost `3.0.0`, WEBTOON English `1.1.0`, WEBTOON Indonesia `1.0.0`, Mangago `1.1.0`, and WestManga `1.0.0`. Catalog metadata contains configuration only. The plugin never downloads or executes Lua from a repository; source files here mirror the reviewed bundled implementations.
+Catalog `1.23.3` includes reviewed bundled adapters for Komiku `3.0.0`, MangaRock `2.0.0`, MangaMost `3.0.0`, WEBTOON English `1.1.0`, WEBTOON Indonesia `1.0.0`, Mangago `1.1.0`, and WestManga `1.0.0`. Catalog metadata contains configuration only. The plugin never downloads or executes Lua from a repository; source files here mirror the reviewed bundled implementations.
 
 Each source entry and its per-source `metadata.json` includes an `icon_url` pointing at the source website's 64-pixel favicon. The plugin bundles these small icons for immediate display and uses metadata icon URLs for other compatible sources. Icons remain the property of their respective source sites.
 

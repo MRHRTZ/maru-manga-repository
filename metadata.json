@@ -1,9 +1,9 @@
 {
   "schema_version": 1,
   "id": "maru-official",
-  "name": "MaruManga Repository",
+  "name": "Maru Manga Repositories",
   "author": "MRHRTZ",
-  "version": "1.23.2",
+  "version": "1.23.3",
   "status": "OK",
   "sources": [
     {
