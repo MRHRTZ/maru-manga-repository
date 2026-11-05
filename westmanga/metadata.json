@@ -1,0 +1,30 @@
+{
+  "version": "1.0.0",
+  "nsfw": false,
+  "profile": {
+    "api_url": "https://www.westmanga.shop/api/manga",
+    "search_path": "/api/manga?q={query}&page={page}&limit=24&sort=latest",
+    "popular_path": "/api/manga?page={page}&limit=24&sort=popular",
+    "latest_path": "/api/manga?page={page}&limit=24&sort=latest",
+    "list_selector": "a[href^=\"/manga/\"]",
+    "list_link_selector": "a[href^=\"/manga/\"]",
+    "list_title_selector": "h1",
+    "title_selector": "h1",
+    "description_selector": "meta[name=\"description\"]",
+    "chapter_selector": "a[href*=\"/read/\"]",
+    "page_selector": "img[src*=\"/api/img-proxy\"]",
+    "image_hosts": [
+      "www.westmanga.shop",
+      "cdn.westmanga.shop",
+      "proxy.westmanga.shop"
+    ]
+  },
+  "adapter": "westmanga",
+  "name": "WestManga",
+  "icon_url": "https://www.google.com/s2/favicons?domain=www.westmanga.shop&sz=64",
+  "base_url": "https://www.westmanga.shop",
+  "id": "westmanga",
+  "languages": [
+    "id"
+  ]
+}

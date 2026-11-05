@@ -1,0 +1,35 @@
+{
+  "id": "webtoon_id",
+  "name": "WEBTOON",
+  "icon_url": "https://www.google.com/s2/favicons?domain=www.webtoons.com&sz=64",
+  "version": "1.0.0",
+  "adapter": "webtoon",
+  "base_url": "https://www.webtoons.com",
+  "languages": [
+    "id"
+  ],
+  "nsfw": false,
+  "profile": {
+    "search_path": "/id/search?keyword={query}&page={page}",
+    "popular_path": "/id/ranking?rankingGenre=ALL&page={page}",
+    "latest_path": "/id/originals?sortOrder=UPDATE&page={page}",
+    "list_selector": "ul.webtoon_list li",
+    "list_link_selector": "a._card_item",
+    "list_title_selector": ".title",
+    "list_cover_selector": "img",
+    "next_selector": ".paginate a.pg_next",
+    "title_selector": ".detail_header h1.subj",
+    "description_selector": "p.summary",
+    "author_selector": ".author_area",
+    "genre_selector": ".detail_header h2.genre",
+    "cover_selector": ".detail_header .thmb img",
+    "chapter_selector": "#_listUl ._episodeItem",
+    "chapter_link_selector": "a.detail_list_link",
+    "page_selector": "img._images",
+    "page_attribute": "data-url",
+    "image_hosts": [
+      "webtoon-phinf.pstatic.net"
+    ],
+    "locale": "id"
+  }
+}

@@ -1,9 +1,33 @@
 {
   "id": "mangarock",
   "name": "MangaRock",
-  "version": 1,
-  "adapter": "planned",
+  "icon_url": "https://www.google.com/s2/favicons?domain=mangarock.one&sz=64",
+  "version": "2.0.0",
+  "adapter": "mangarock",
   "url": "https://mangarock.one/",
-  "languages": ["en"],
-  "planned": true
+  "languages": [
+    "en"
+  ],
+  "base_url": "https://mangarock.one",
+  "profile": {
+    "search_path": "/search?q={query}&page={page}",
+    "popular_path": "/",
+    "latest_path": "/updated?page={page}",
+    "list_selector": ".listupd .bs",
+    "list_link_selector": "a",
+    "list_title_selector": ".tt",
+    "list_cover_selector": "img",
+    "next_selector": "a[rel=\"next\"]",
+    "title_selector": "h1.entry-title",
+    "description_selector": "meta[name=\"description\"]",
+    "cover_selector": ".seriestucontl .thumb img",
+    "metadata_row_selector": "table.infotable tr",
+    "genre_selector": ".seriestugenre a",
+    "chapter_selector": ".eph-num a",
+    "page_selector": "img.ts-main-image",
+    "page_attribute": "src",
+    "image_hosts": [
+      "llma.zogana.lol"
+    ]
+  }
 }

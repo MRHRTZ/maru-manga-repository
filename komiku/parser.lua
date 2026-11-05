@@ -5,15 +5,17 @@ function Parser.new(html,resolve,clean,profile,digest)
     -- Komiku's current server-rendered markup exposes author/status in
     -- microdata and table rows. These selectors override old installed
     -- catalogs that used unsupported CSS :contains() pseudo-selectors.
-    profile.title_selector="h1 span[itemprop=name]"
-    profile.description_selector="p.desc[itemprop=description], #Sinopsis > p"
-    profile.author_selector="span[itemprop=author] meta[itemprop=name]"
-    profile.artist_selector="span[itemprop=artist] meta[itemprop=name]"
-    profile.status_selector="meta[itemprop=creativeWorkStatus]"
+    profile.title_selector="h1 span[itemprop=\"name\"]"
+    profile.description_selector="p.desc"
+    profile.author_selector="span[itemprop=\"author\"] meta[itemprop=\"name\"]"
+    profile.artist_selector="span[itemprop=\"artist\"] meta[itemprop=\"name\"]"
+    profile.status_selector="meta[itemprop=\"creativeWorkStatus\"]"
     profile.genre_selector="ul.genre li.genre a span"
     profile.cover_selector=".ims img"
     profile.cover_attribute="src"
     profile.list_cover_selector="img"
+    profile.latest_selector=".new1 a"
+    profile.latest_label="terbaru"
     profile.metadata_row_selector="table.inftable tr"
     local wrapped=generic.new(html,resolve,clean,profile,digest)
     return setmetatable({html=wrapped},Parser)

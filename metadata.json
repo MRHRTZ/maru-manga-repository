@@ -1,31 +1,41 @@
 {
   "schema_version": 1,
   "id": "maru-official",
-  "name": "Maru Manga Sources",
+  "name": "MaruManga Repository",
   "author": "MRHRTZ",
-  "version": "1.15.0",
+  "version": "1.23.2",
   "status": "OK",
   "sources": [
     {
       "id": "komiku",
       "name": "Komiku",
-      "version": 2,
+      "icon_url": "https://www.google.com/s2/favicons?domain=komiku.org&sz=64",
+      "version": "3.0.0",
       "adapter": "komiku",
       "base_url": "https://komiku.org",
-      "languages": ["id"],
+      "languages": [
+        "id"
+      ],
       "metadata": "komiku/metadata.json",
       "profile": {
         "api_url": "https://api.komiku.org",
-        "image_hosts": ["thumbnail.komiku.to", "thumbnail.komiku.org", "img.komiku.org", "image.komiku.org", "update.komiku.org", "komikid.org"],
+        "image_hosts": [
+          "thumbnail.komiku.to",
+          "thumbnail.komiku.org",
+          "img.komiku.org",
+          "image.komiku.org",
+          "update.komiku.org",
+          "komikid.org"
+        ],
         "list_selector": "div.bge",
         "list_link_selector": "a",
         "list_title_selector": "h3",
         "list_cover_selector": "img",
-        "title_selector": "h1 span[itemprop=name]",
-        "description_selector": "p.desc[itemprop=description], #Sinopsis > p",
-        "author_selector": "span[itemprop=author] meta[itemprop=name]",
-        "artist_selector": "span[itemprop=artist] meta[itemprop=name]",
-        "status_selector": "meta[itemprop=creativeWorkStatus]",
+        "title_selector": "h1 span[itemprop=\"name\"]",
+        "description_selector": "p.desc",
+        "author_selector": "span[itemprop=\"author\"] meta[itemprop=\"name\"]",
+        "artist_selector": "span[itemprop=\"artist\"] meta[itemprop=\"name\"]",
+        "status_selector": "meta[itemprop=\"creativeWorkStatus\"]",
         "metadata_row_selector": "table.inftable tr",
         "genre_selector": "ul.genre li.genre a span",
         "cover_selector": ".ims img",
@@ -34,29 +44,223 @@
         "chapter_link_selector": "a",
         "chapter_attribute": "href",
         "page_selector": "#Baca_Komik img",
-        "page_attributes": ["src"]
+        "page_attributes": [
+          "src"
+        ]
       }
     },
     {
       "id": "mangarock",
       "name": "MangaRock",
-      "version": 1,
-      "adapter": "planned",
+      "icon_url": "https://www.google.com/s2/favicons?domain=mangarock.one&sz=64",
+      "version": "2.0.0",
+      "adapter": "mangarock",
       "url": "https://mangarock.one/",
-      "languages": ["en"],
-      "planned": true,
-      "metadata": "mangarock/metadata.json"
+      "languages": [
+        "en"
+      ],
+      "metadata": "mangarock/metadata.json",
+      "base_url": "https://mangarock.one",
+      "profile": {
+        "search_path": "/search?q={query}&page={page}",
+        "popular_path": "/",
+        "latest_path": "/updated?page={page}",
+        "list_selector": ".listupd .bs",
+        "list_link_selector": "a",
+        "list_title_selector": ".tt",
+        "list_cover_selector": "img",
+        "next_selector": "a[rel=\"next\"]",
+        "title_selector": "h1.entry-title",
+        "description_selector": "meta[name=\"description\"]",
+        "cover_selector": ".seriestucontl .thumb img",
+        "metadata_row_selector": "table.infotable tr",
+        "genre_selector": ".seriestugenre a",
+        "chapter_selector": ".eph-num a",
+        "page_selector": "img.ts-main-image",
+        "page_attribute": "src",
+        "image_hosts": [
+          "llma.zogana.lol"
+        ]
+      }
     },
     {
-      "id": "mangago",
+      "id": "mangamost",
+      "name": "MangaMost",
+      "icon_url": "https://www.google.com/s2/favicons?domain=mangamost.com&sz=64",
+      "version": "3.0.0",
+      "adapter": "mangamost",
+      "languages": [
+        "en"
+      ],
+      "nsfw": false,
+      "metadata": "mangamost/metadata.json",
+      "base_url": "https://mangamost.com",
+      "profile": {
+        "api_url": "https://mangamost.com/api/v1",
+        "image_hosts": [
+          "mangamost.com"
+        ]
+      },
+      "app_url": "https://play.google.com/store/apps/details?id=baca.read.komik.manga&hl=id"
+    },
+    {
+      "id": "webtoon",
+      "name": "WEBTOON",
+      "icon_url": "https://www.google.com/s2/favicons?domain=www.webtoons.com&sz=64",
+      "version": "1.1.0",
+      "adapter": "webtoon",
+      "base_url": "https://www.webtoons.com",
+      "languages": [
+        "en"
+      ],
+      "nsfw": false,
+      "metadata": "webtoon/metadata.json",
+      "profile": {
+        "search_path": "/en/search?keyword={query}&page={page}",
+        "popular_path": "/en/ranking?rankingGenre=ALL&page={page}",
+        "latest_path": "/en/originals?sortOrder=UPDATE&page={page}",
+        "list_selector": "ul.webtoon_list li",
+        "list_link_selector": "a._card_item",
+        "list_title_selector": ".title",
+        "list_cover_selector": "img",
+        "next_selector": ".paginate a.pg_next",
+        "title_selector": ".detail_header h1.subj",
+        "description_selector": "p.summary",
+        "author_selector": ".author_area",
+        "genre_selector": ".detail_header h2.genre",
+        "cover_selector": ".detail_header .thmb img",
+        "chapter_selector": "#_listUl ._episodeItem",
+        "chapter_link_selector": "a.detail_list_link",
+        "page_selector": "img._images",
+        "page_attribute": "data-url",
+        "image_hosts": [
+          "webtoon-phinf.pstatic.net"
+        ],
+        "locale": "en"
+      }
+    },
+    {
+      "adapter": "mangago",
       "name": "Mangago",
-      "version": 1,
-      "adapter": "planned",
-      "app_url": "https://play.google.com/store/apps/details?id=baca.read.komik.manga&hl=id",
-      "languages": ["en", "id"],
+      "icon_url": "https://www.google.com/s2/favicons?domain=www.mangago.zone&sz=64",
+      "base_url": "https://www.mangago.zone",
+      "languages": [
+        "en"
+      ],
+      "profile": {
+        "cover_selector": ".left.cover img",
+        "image_hosts": [
+          "www.mangago.zone",
+          "i1.mangapicgallery.com",
+          "i2.mangapicgallery.com",
+          "i4.mangapicgallery.com",
+          "i6.mangapicgallery.com",
+          "i8.mangapicgallery.com",
+          "i9.mangapicgallery.com",
+          "pic1.mangapicgallery.com",
+          "iweb12.mangapicgallery.com"
+        ],
+        "list_link_selectors": [
+          ".row-1 h2 a",
+          "h2 a",
+          "a[href*=\"/work/\"]"
+        ],
+        "list_title_selector": ".row-1 h2 a",
+        "author_selector": ".manga_right table tr a[href*=\"/home/people/\"]",
+        "page_attribute": "src",
+        "search_path": "/r/l_search/?name={query}&page={page}",
+        "popular_path": "/topmanga/?page={page}",
+        "chapter_selector": "#chapter_table tbody tr",
+        "genre_selector": ".manga_right table tr a[href*=\"/genre/\"]",
+        "list_selectors": [
+          "#search_list > li",
+          "#topmanga_list > li",
+          ".box"
+        ],
+        "page_selector": "#pic_container img",
+        "title_selector": ".w-title h1",
+        "next_selectors": [
+          ".pagination a.next",
+          ".pagination a[rel=\"next\"]"
+        ],
+        "latest_path": "/?page={page}",
+        "chapter_link_selector": "a.chico",
+        "status_selector": ".manga_right table tr:first-child td",
+        "list_cover_selectors": [
+          ".left img",
+          "img"
+        ],
+        "description_selector": ".manga_summary"
+      },
+      "id": "mangago",
       "nsfw": true,
-      "planned": true,
-      "metadata": "mangago/metadata.json"
+      "metadata": "mangago/metadata.json",
+      "version": "1.1.0"
+    },
+    {
+      "version": "1.0.0",
+      "nsfw": false,
+      "profile": {
+        "api_url": "https://www.westmanga.shop/api/manga",
+        "search_path": "/api/manga?q={query}&page={page}&limit=24&sort=latest",
+        "popular_path": "/api/manga?page={page}&limit=24&sort=popular",
+        "latest_path": "/api/manga?page={page}&limit=24&sort=latest",
+        "list_selector": "a[href^=\"/manga/\"]",
+        "list_link_selector": "a[href^=\"/manga/\"]",
+        "list_title_selector": "h1",
+        "title_selector": "h1",
+        "description_selector": "meta[name=\"description\"]",
+        "chapter_selector": "a[href*=\"/read/\"]",
+        "page_selector": "img[src*=\"/api/img-proxy\"]",
+        "image_hosts": [
+          "www.westmanga.shop",
+          "cdn.westmanga.shop",
+          "proxy.westmanga.shop"
+        ]
+      },
+      "adapter": "westmanga",
+      "name": "WestManga",
+      "icon_url": "https://www.google.com/s2/favicons?domain=www.westmanga.shop&sz=64",
+      "base_url": "https://www.westmanga.shop",
+      "id": "westmanga",
+      "languages": [
+        "id"
+      ]
+    },
+    {
+      "id": "webtoon_id",
+      "name": "WEBTOON",
+      "icon_url": "https://www.google.com/s2/favicons?domain=www.webtoons.com&sz=64",
+      "version": "1.0.0",
+      "adapter": "webtoon",
+      "base_url": "https://www.webtoons.com",
+      "languages": [
+        "id"
+      ],
+      "nsfw": false,
+      "profile": {
+        "search_path": "/id/search?keyword={query}&page={page}",
+        "popular_path": "/id/ranking?rankingGenre=ALL&page={page}",
+        "latest_path": "/id/originals?sortOrder=UPDATE&page={page}",
+        "list_selector": "ul.webtoon_list li",
+        "list_link_selector": "a._card_item",
+        "list_title_selector": ".title",
+        "list_cover_selector": "img",
+        "next_selector": ".paginate a.pg_next",
+        "title_selector": ".detail_header h1.subj",
+        "description_selector": "p.summary",
+        "author_selector": ".author_area",
+        "genre_selector": ".detail_header h2.genre",
+        "cover_selector": ".detail_header .thmb img",
+        "chapter_selector": "#_listUl ._episodeItem",
+        "chapter_link_selector": "a.detail_list_link",
+        "page_selector": "img._images",
+        "page_attribute": "data-url",
+        "image_hosts": [
+          "webtoon-phinf.pstatic.net"
+        ],
+        "locale": "id"
+      }
     }
   ]
 }

@@ -1,0 +1,19 @@
+{
+  "adapter": "mangamost",
+  "app_url": "https://play.google.com/store/apps/details?id=baca.read.komik.manga&hl=id",
+  "name": "MangaMost",
+  "icon_url": "https://www.google.com/s2/favicons?domain=mangamost.com&sz=64",
+  "base_url": "https://mangamost.com",
+  "languages": [
+    "en"
+  ],
+  "profile": {
+    "api_url": "https://mangamost.com/api/v1",
+    "image_hosts": [
+      "mangamost.com"
+    ]
+  },
+  "id": "mangamost",
+  "nsfw": false,
+  "version": "3.0.0"
+}

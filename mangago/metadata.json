@@ -1,10 +1,57 @@
 {
-  "id": "mangago",
-  "name": "Mangago",
-  "version": 1,
-  "adapter": "planned",
-  "app_url": "https://play.google.com/store/apps/details?id=baca.read.komik.manga&hl=id",
-  "languages": ["en", "id"],
+  "version": "1.1.0",
   "nsfw": true,
-  "planned": true
+  "profile": {
+    "cover_selector": ".left.cover img",
+    "image_hosts": [
+      "www.mangago.zone",
+      "i1.mangapicgallery.com",
+      "i2.mangapicgallery.com",
+      "i4.mangapicgallery.com",
+      "i6.mangapicgallery.com",
+      "i8.mangapicgallery.com",
+      "i9.mangapicgallery.com",
+      "pic1.mangapicgallery.com",
+      "iweb12.mangapicgallery.com"
+    ],
+    "list_link_selectors": [
+      ".row-1 h2 a",
+      "h2 a",
+      "a[href*=\"/work/\"]"
+    ],
+    "list_title_selector": ".row-1 h2 a",
+    "author_selector": ".manga_right table tr a[href*=\"/home/people/\"]",
+    "page_attribute": "src",
+    "search_path": "/r/l_search/?name={query}&page={page}",
+    "popular_path": "/topmanga/?page={page}",
+    "chapter_selector": "#chapter_table tbody tr",
+    "genre_selector": ".manga_right table tr a[href*=\"/genre/\"]",
+    "list_selectors": [
+      "#search_list > li",
+      "#topmanga_list > li",
+      ".box"
+    ],
+    "page_selector": "#pic_container img",
+    "title_selector": ".w-title h1",
+    "next_selectors": [
+      ".pagination a.next",
+      ".pagination a[rel=\"next\"]"
+    ],
+    "latest_path": "/?page={page}",
+    "chapter_link_selector": "a.chico",
+    "status_selector": ".manga_right table tr:first-child td",
+    "list_cover_selectors": [
+      ".left img",
+      "img"
+    ],
+    "description_selector": ".manga_summary"
+  },
+  "adapter": "mangago",
+  "name": "Mangago",
+  "icon_url": "https://www.google.com/s2/favicons?domain=www.mangago.zone&sz=64",
+  "base_url": "https://www.mangago.zone",
+  "id": "mangago",
+  "languages": [
+    "en"
+  ]
 }

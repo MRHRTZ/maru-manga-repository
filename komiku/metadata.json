@@ -1,11 +1,17 @@
 {
   "id": "komiku",
   "name": "Komiku",
-  "version": 2,
+  "icon_url": "https://www.google.com/s2/favicons?domain=komiku.org&sz=64",
+  "version": "3.0.0",
   "adapter": "komiku",
   "base_url": "https://komiku.org",
-  "languages": ["id"],
+  "languages": [
+    "id"
+  ],
   "nsfw": false,
   "attribution": "Keiyoushi extensions-source Komiku source, Apache-2.0; native Lua port",
-  "source": ["source.lua", "parser.lua"]
+  "source": [
+    "source.lua",
+    "parser.lua"
+  ]
 }
