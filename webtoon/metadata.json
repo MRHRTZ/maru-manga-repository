@@ -2,7 +2,7 @@
   "id": "webtoon",
   "name": "WEBTOON",
   "icon_url": "https://www.google.com/s2/favicons?domain=www.webtoons.com&sz=64",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "adapter": "webtoon",
   "base_url": "https://www.webtoons.com",
   "languages": [
@@ -25,6 +25,7 @@
     "cover_selector": ".detail_header .thmb img",
     "chapter_selector": "#_listUl ._episodeItem",
     "chapter_link_selector": "a.detail_list_link",
+    "chapter_title_selector": ".subj",
     "page_selector": "img._images",
     "page_attribute": "data-url",
     "image_hosts": [
